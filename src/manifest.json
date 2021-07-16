@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "Linco",
+  "homepage_url": "https://codechit.com/",
+  "description": "Linco: store your links in a structured way.",
+  "default_locale": "en",
+  "permissions": [
+    "activeTab",
+    "<all_urls>",
+    "*://*/*",
+    "storage",
+    "tabs",
+    "contextMenus"
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArPlas+oTAe3ZHxdBbsT3PUly1zaoqi1L4YcGRVPHsN1tAau8GzCwHtQsQSyQjS87v3Ep2Np98MTEjG708ancXZ93E8tR6UDqRWCwH/R9u1+zyfc9W0QoZeeg8UKiLBqn27zHZM+PoBfQ8yjWd35xysUDBMcB7WsFw5nB/10Kd2hJvEn7K9+sUI3i+6Dks2XF0vtOPMkL5oRiKkY9cNJaDZKDVqmTsW7hKOIB9wBk89rxUPDN8HlGDH7LVgLE6+DSePxWkEgtslxEmdgMTVKumGs2TEntTaGu4j83xvD9nLpeiRbGXG1MzVk/0IfqDpO76f/unqBlXg7BQTToFIP5cwIDAQAB",
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+      {
+        "matches":[
+              "<all_urls>"
+        ],
+        "js": ["js/content-script.js"]
+      }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "19": "icons/19.png",
+      "38": "icons/38.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  }
+}
