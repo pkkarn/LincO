@@ -1,7 +1,12 @@
-browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  console.log('Hello from the background')
+const commands = require('./modules/commands');
+const note = require('./modules/note')
 
-  browser.tabs.executeScript({
-    file: 'content-script.js',
-  });
+// Reciving Message: From Content
+chrome.runtime.onMessage.addListener(function(request) {
+  if(request.message==='contentCall') {
+    console.log("content -> Backround")
+  }
 })
+
+commands();
+note();

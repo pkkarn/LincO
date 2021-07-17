@@ -43,5 +43,14 @@
   "options_ui": {
     "page": "options.html",
     "browser_style": true
+  },
+  "commands": {
+    "saveLink": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "Save my link"
+    }
   }
 }

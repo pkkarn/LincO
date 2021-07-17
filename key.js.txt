@@ -1,3 +1,5 @@
-export default {
-    
+module.exports = {
+    LINK_WEBHOOK: "discord_webhook_url",
+    IMAGE_WEBHOOK: "discord_webhook_url",
+    NOTE_WEBHOOK: "discord_webhook_url",
 }
